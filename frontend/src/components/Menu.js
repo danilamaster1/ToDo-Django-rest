@@ -1,18 +1,17 @@
 import React from "react";
 
 export const Menu  = () => (
-    
-    <nav className="navbar">
-        <div className="brend">
-            <a href="/"><h1>ToDo App</h1></a>
+    <nav className="navbar navbar-dark navbar-expand-lg bg-black">
+        <div className="navbar-brand p-3">
+            <a href="/" className="nav-link">ToDo App</a>
         </div>
 
-        <ul className="nav">
-            <li>
-                <a href='/'>Home</a>
+        <ul className="navbar-nav">
+            <li className="nav-item">
+                <a href='/' className="nav-link">Home</a>
             </li>
-            <li>
-                <a href='#'>About</a>
+            <li className="nav-item">
+                <a href='#' className="nav-link">About</a>
             </li>
         </ul>
     </nav>

@@ -26,11 +26,11 @@ class App extends React.Component {
   
   	render() {
     	return (
-			<div>
+			<div className='text-bg-secondary'>
 				<div>
 					<Menu />
 				</div>
-				<div className='container'>
+				<div className='container p-4'>
 					<UserList users={this.state.users}/>
 				</div>
 				<div>
