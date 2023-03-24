@@ -28,8 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3003',
-    'http://127.0.0.1:3003'
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
 ]
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'user',
+    'todo',
     'corsheaders',
 ]
 
@@ -134,3 +135,10 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
+}
