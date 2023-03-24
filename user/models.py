@@ -27,3 +27,6 @@ class CustomUser(AbstractUser):
             "unique": _("A user with that email address already exists."),
         },
     )
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
