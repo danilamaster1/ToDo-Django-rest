@@ -12,7 +12,8 @@ class ProjectFilter(filters.FilterSet):
 
 class ToDoFilter(filters.FilterSet):
     text = filters.CharFilter()
-
+    created = filters.DateFromToRangeFilter()
+    
     class Meta:
         model = ToDo
-        fields = ['id', 'text']
+        fields = ['id', 'text', 'created']

@@ -1,9 +1,9 @@
-from django.shortcuts import get_object_or_404
+#from django.shortcuts import get_object_or_404
 #from rest_framework.viewsets import ViewSet
+#from rest_framework.response import Response
 from rest_framework.mixins import ListModelMixin, UpdateModelMixin, RetrieveModelMixin
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
-from rest_framework.response import Response
 from .serializers import UserModelSerializer
 from .models import CustomUser
 
@@ -36,4 +36,3 @@ class UserCustomViewSet(ListModelMixin, RetrieveModelMixin, UpdateModelMixin, Ge
     queryset = CustomUser.objects.all()
     serializer_class = UserModelSerializer
     renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
-
