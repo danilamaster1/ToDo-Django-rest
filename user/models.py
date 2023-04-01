@@ -26,7 +26,8 @@ class CustomUser(AbstractUser):
         error_messages={
             "unique": _("A user with that email address already exists."),
         },
-    )
+    ) 
+
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+        return f'{self.first_name} {self.last_name} {self.username}'

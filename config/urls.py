@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
 from user.views import UserCustomViewSet
 from todo.views import ProjectModelViewSet, ToDoModelViewSet
 
@@ -30,4 +31,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='api/')),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
+    path('api-token/', obtain_auth_token),
 ]

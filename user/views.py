@@ -36,3 +36,4 @@ class UserCustomViewSet(ListModelMixin, RetrieveModelMixin, UpdateModelMixin, Ge
     queryset = CustomUser.objects.all()
     serializer_class = UserModelSerializer
     renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
+    
