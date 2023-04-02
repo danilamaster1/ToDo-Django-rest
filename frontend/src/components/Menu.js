@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 export const Menu  = () => (
     <nav className="navbar navbar-dark navbar-expand-lg bg-black">
         <div className="navbar-brand p-3">
@@ -16,6 +17,10 @@ export const Menu  = () => (
             </li>
             <li className="nav-item">
                 <Link to='/todo' className="nav-link">Todo</Link>
+            </li>
+            <li className="nav-item">
+                {/* {App.is_auth() ? <button onClick={()=> App.logout()}>Logout</button> : */}
+                <Link to='/login' className="nav-link">Login</Link>
             </li>
         </ul>
     </nav>
